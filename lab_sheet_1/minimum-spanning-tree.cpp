@@ -1,3 +1,7 @@
+// 19000073
+// Lab sheet 1
+// Question 02
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -168,12 +172,13 @@ int main () {
     uG.insertVertex(4);
     uG.insertVertex(5);
 
-    uG.insertEdge(0, 1, 3, true);
-    uG.insertEdge(0, 5, 1, true);
-    uG.insertEdge(1, 5, 2, true);
-    uG.insertEdge(4, 5, 2, true);
-    uG.insertEdge(2, 5, 9, true);
-    uG.insertEdge(3, 5, 5, true);
+    uG.insertEdge(1, 3, 2, true);
+    uG.insertEdge(3, 4, 2, true);
+    uG.insertEdge(4, 5, 6, true);
+    uG.insertEdge(3, 2, 4, true);
+    uG.insertEdge(2, 1, 1, true);
+    uG.insertEdge(2, 0, 3, true);
+    uG.insertEdge(0, 1, 4, true);
 
     uG.printGraph();
     uG.findMST();
