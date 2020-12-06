@@ -5,12 +5,15 @@ class Graph:
     def __init__(self):
         self.vertices = {}
 
-    def addVertex(self, v):
-        self.vertices[v] = deque()
-
+	def __repr__(self):
+		return self.vertices
+	
+	def addVertex(self, v):
+		self.vertices[v] = deque()
+	
     def addEdge(self, v, u):
-        self.vertices[v].append(u)
-
+		self.vertices[v].append(u)
+	
     def getInDegree(self, v):
         inDegree = 0
         for u in self.vertices:
@@ -18,7 +21,7 @@ class Graph:
                 if a == v:
                     inDegree += 1
         return inDegree
-
+	
     def findUniversalSink(self):
         for u in self.vertices:
             if not self.vertices[u]:
@@ -40,4 +43,5 @@ g.addEdge(1, 2)
 g.addEdge(3, 2)
 g.addEdge(4, 2)
 
+print (g)
 g.findUniversalSink()
